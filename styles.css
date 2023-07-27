@@ -1,0 +1,155 @@
+:root {
+  --main-color1: black;
+  --main-color2: red;
+  --main-color3: yellow;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 2rem;
+  background-color: #eee;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#nav-bar {
+  font-weight: bold;
+  display: block;
+}
+
+#nav-bar > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#nav-bar li {
+  display: block;
+  padding: 1rem;
+  width: 90%;
+  height: 2.5rem;
+  margin-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative; /* Add this to the <li> element */
+}
+
+#nav-bar li a {
+  display: flex; /* Use flexbox to center the content */
+  align-items: center; /* Vertically center the content */
+  justify-content: space-evenly; /* Horizontally center the content (optional) */
+  list-style: none;
+  text-decoration: none;
+  color: #333;
+  position: absolute; /* Add this to the <a> element */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* Add this to ensure the links are clickable */
+}
+
+#nav-bar li a:hover {
+  cursor: pointer;
+  background-color: beige;
+  box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 40%;
+  transition: 1s;
+}
+
+#nav-bar li a:active {
+  box-shadow: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #eee;
+  width: 100%;
+}
+
+.logo {
+  width: 30vw;
+}
+
+.logo > img {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+hr {
+  border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 250px;
+  margin-top: 5px;
+}
+
+#form-title {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+form {
+  display: block;
+}
+
+.contact input[type="email"] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+
+.contact input[type="submit"] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: var(--main-color3);
+}
+
+.contact > h2 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
