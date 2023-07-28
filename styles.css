@@ -18,16 +18,25 @@ body {
   margin: 2rem;
   background-color: #eee;
   font-family: "Lato", sans-serif;
+  min-width: 400px;
 }
 
 main {
   position: relative;
 }
 
-.container {
-  max-width: 1000px;
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  max-width: 100vw;
+  min-width: 500px;
   width: 100%;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding-right: 2rem;
 }
 
 #nav-bar {
@@ -85,9 +94,6 @@ a {
 }
 
 #header {
-  position: fixed;
-  top: 0;
-  min-height: 75px;
   padding: 0px 20px;
   display: flex;
   flex-direction: row;
@@ -111,7 +117,9 @@ a {
 }
 
 hr {
-  border: 1px solid rgba(120, 120, 120, 0.6);
+  width: calc(100vw - 10rem);
+  margin-left: -2rem;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.6);
 }
 
 .contact {
@@ -120,8 +128,7 @@ hr {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 250px;
-  margin-top: 5px;
+  margin-top: 6rem;
 }
 
 #form-title {
@@ -141,12 +148,30 @@ form {
 }
 
 .contact input[type="submit"] {
+  background-color: var(--main-color3);
+}
+
+.contact input[type="submit"] {
   max-width: 150px;
   width: 100%;
   height: 30px;
   margin: 15px 0;
   border: 0;
-  background-color: var(--main-color3);
+  background-color: var(--main-color2);
+  color: #eee;
+}
+
+.contact input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgb(224, 99, 71);
+  color: #eee;
+  box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.5);
+}
+
+.contact input[type="submit"]:active {
+  background-color: rgb(200, 8, 21);
+  box-shadow: none;
+  transition: 1s;
 }
 
 .contact > h2 {
