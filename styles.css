@@ -215,9 +215,9 @@ form {
   word-wrap: break-word;
 }
 
-.features {
+/* .features {
   margin-top: 30px;
-}
+} */
 
 .icon {
   display: flex;
@@ -232,6 +232,7 @@ form {
   display: flex;
   /* justify-content: flex-start;
   align-items: center; */
+  margin-bottom: 40px;
 }
 
 .desc {
@@ -241,6 +242,10 @@ form {
   height: 125px;
   width: 80vw;
   padding: 5px;
+}
+
+.icon-title {
+  margin-bottom: -0.5rem;
 }
 
 .fa,
@@ -267,6 +272,86 @@ form {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: calc(100% / 3);
+  margin: 10px;
+}
+
+.box-title {
+  background-color: gainsboro;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box-price {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+}
+
+.price {
+  font-size: 1.5rem;
+}
+
+.price-details {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.btn-price {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 6px 12px 6px 12px;
+  margin: 1rem 0;
+  background-color: var(--main-color3);
+  min-height: 40px;
+}
+
+.btn-price:hover {
+  background-color: orange;
+  transition: 1s;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.btn-price:active {
+  transition: 1s;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button {
+  appearance: none; /* This property is used for modern browsers */
+  -webkit-appearance: none; /* For Safari and older versions of Chrome */
+  -moz-appearance: none; /* For Firefox */
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  /* Add any additional custom styles you want for your buttons */
 }
 
 @media only screen and (max-width: 650px) {
@@ -318,5 +403,17 @@ form {
     text-align: center;
     padding: 0;
     height: 150px;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .pricing {
+    flex-direction: column;
+    margin: 2rem 0;
   }
 }
