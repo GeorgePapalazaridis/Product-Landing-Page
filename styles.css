@@ -367,6 +367,58 @@ button {
   /* Add any additional custom styles you want for your buttons */
 }
 
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+.footer-details {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: darkgray;
+}
+
+.footer-menu > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 26vw;
+}
+
+.footer-menu > ul > li {
+  display: block;
+  height: 2rem;
+  margin-bottom: 5px;
+}
+
+.footer-menu li a {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: #444;
+}
+
+.footer-menu li a:hover {
+  color: #ddd;
+  cursor: pointer;
+}
+
+.footer-menu li a:active {
+  color: orange;
+}
+
+.footer-cr p {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
 @media only screen and (max-width: 650px) {
   #header {
     flex-wrap: wrap;
@@ -428,5 +480,15 @@ button {
   .pricing {
     flex-direction: column;
     margin: 4rem 0;
+  }
+
+  .footer-menu > ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-details {
+    align-items: center;
   }
 }
