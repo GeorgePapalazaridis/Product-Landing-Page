@@ -11,27 +11,57 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 16px;
 }
 
 body {
   margin: 2rem;
   background-color: #eee;
   font-family: "Lato", sans-serif;
+  min-width: 400px;
 }
 
 main {
   position: relative;
 }
 
-.container {
-  max-width: 1000px;
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+section {
+  display: block;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  max-width: 100vw;
+  min-width: 500px;
   width: 100%;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding-right: 2rem;
 }
 
 #nav-bar {
-  font-weight: bold;
   display: block;
 }
 
@@ -46,6 +76,7 @@ main {
   display: block;
   padding: 1rem;
   width: 90%;
+  min-width: 15vw;
   height: 2.5rem;
   margin-bottom: 5px;
   margin-right: auto;
@@ -84,20 +115,26 @@ a {
   text-decoration: none;
 }
 
+.nav-link {
+  font-size: 1em;
+  text-align: center;
+}
+
 #header {
-  position: fixed;
-  top: 0;
-  min-height: 75px;
   padding: 0px 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  justify-content: space-around;
+  align-items: center;
   background-color: #eee;
   width: 100%;
+  min-height: 75px;
 }
 
 .logo {
-  width: 30vw;
+  min-width: 35vw;
 }
 
 .logo > img {
@@ -111,7 +148,9 @@ a {
 }
 
 hr {
-  border: 1px solid rgba(120, 120, 120, 0.6);
+  width: calc(100vw - 10rem);
+  margin-left: -2rem;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.6);
 }
 
 .contact {
@@ -120,14 +159,13 @@ hr {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 250px;
-  margin-top: 5px;
+  margin-top: 10rem;
 }
 
 #form-title {
   display: block;
   font-size: 1.5em;
-  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 form {
@@ -141,15 +179,144 @@ form {
 }
 
 .contact input[type="submit"] {
+  background-color: var(--main-color3);
+}
+
+.contact input[type="submit"] {
   max-width: 150px;
   width: 100%;
   height: 30px;
   margin: 15px 0;
   border: 0;
-  background-color: var(--main-color3);
+  background-color: var(--main-color2);
+  color: #eee;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 0 20px;
+}
+
+.contact input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgb(224, 99, 71);
+  color: #eee;
+  box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.5);
+}
+
+.contact input[type="submit"]:active {
+  background-color: rgb(200, 8, 21);
+  box-shadow: none;
+  transition: 1s;
 }
 
 .contact > h2 {
   margin-bottom: 20px;
   word-wrap: break-word;
+}
+
+.features {
+  margin-top: 30px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 125px;
+  color: var(--main-color2);
+}
+
+.grid {
+  display: flex;
+  /* justify-content: flex-start;
+  align-items: center; */
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+.fa,
+.fas {
+  font-weight: 900;
+}
+.fa,
+.far,
+.fas {
+  font-family: "Font Awesome 5 Free";
+}
+.fa-3x {
+  font-size: 3em;
+}
+.fa,
+.fab,
+.fal,
+.far,
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 650px) {
+  #header {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #nav-bar {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  #nav-bar > ul {
+    flex-direction: column;
+  }
+
+  #nav-bar li {
+    padding-bottom: 5px;
+  }
+
+  .contact {
+    margin-top: 12rem;
+  }
+
+  .features {
+    margin-top: 0;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
 }

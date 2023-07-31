@@ -13,85 +13,108 @@
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&amp;display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <main>
-      <section class="heading">
-        <header id="header">
-          <div class="logo">
-            <img
-              id="header-img"
-              src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
-              alt="original trombones logo"
-              loading="lazy"
+      <section>
+        <div class="heading">
+          <header id="header">
+            <div class="logo">
+              <img
+                id="header-img"
+                src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+                alt="original trombones logo"
+                loading="lazy"
+              />
+            </div>
+            <nav id="nav-bar">
+              <ul>
+                <li><a href="#" class="nav-link" id="#">Features</a></li>
+                <li><a href="#" class="nav-link" id="#">How It Works</a></li>
+                <li><a href="#" class="nav-link" id="#">Pricing</a></li>
+              </ul>
+            </nav>
+          </header>
+          <hr />
+        </div>
+      </section>
+      <section>
+        <div class="contact">
+          <h2 id="form-title">Handcrafted, home-made masterpieces</h2>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Enter your email address.."
+              required
             />
-          </div>
-          <nav id="nav-bar">
-            <ul>
-              <li><a href="#" class="nav-link" id="#">Features</a></li>
-              <li><a href="#" class="nav-link" id="#">How It Works</a></li>
-              <li><a href="#" class="nav-link" id="#">Pricing</a></li>
-            </ul>
-          </nav>
-        </header>
-        <hr />
-      </section>
-      <div class="container"></div>
-      <section class="contact">
-        <h2 id="form-title">Handcrafted, home-made masterpieces</h2>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-          <input
-            name="email"
-            id="email"
-            type="email"
-            placeholder="Enter your email address.."
-            required
-          />
 
-          <input type="submit" id="submit" value="Get Started" class="btn" />
-        </form>
-      </section>
-      <section class="features">
-        <div class="">
-          <i class="fa-solid fa-fire-flame-curved"></i>
-          <h2 class="icon-title">Premium Materials</h2>
-          <p class="icon-discription">
-            Our trombones use the shiniest brass which is sourced locally. This
-            will increase the longevity of your purchase.
-          </p>
-        </div>
-        <div class="">
-          <i class="fa-solid fa-truck"></i>
-          <h2 class="icon-title">Fast Shipping</h2>
-          <p class="icon-discription">
-            We make sure you recieve your trombone as soon as we have finished
-            making it. We also provide free returns if you are not satisfied.
-          </p>
-        </div>
-        <div class="">
-          <i class="fa-solid fa-battery-full"></i>
-          <h2 class="icon-title">Quality Assurance</h2>
-          <p class="icon-discription">
-            For every purchase you make, we will ensure there are no damages or
-            faults and we will check and test the pitch of your instrument.
-          </p>
+            <input type="submit" id="submit" value="Get Started" class="btn" />
+          </form>
         </div>
       </section>
-      <section class="video">
-        <iframe
-          id="video"
-          src="https://www.youtube.com/embed/y8Yv4pnO7qc"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+      <section>
+        <div class="features">
+          <div class="grid">
+            <div class="icon">
+              <i class="fa fa-3x fa-fire"></i>
+            </div>
+            <div class="desc">
+              <h2 class="icon-title">Premium Materials</h2>
+              <p class="icon-discription">
+                Our trombones use the shiniest brass which is sourced locally.
+                This will increase the longevity of your purchase.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon">
+              <i class="fa fa-3x fa-truck"></i>
+            </div>
+            <div class="desc">
+              <h2 class="icon-title">Fast Shipping</h2>
+              <p class="icon-discription">
+                We make sure you recieve your trombone as soon as we have
+                finished making it. We also provide free returns if you are not
+                satisfied.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon">
+              <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
+            </div>
+            <div class="desc">
+              <h2 class="icon-title">Quality Assurance</h2>
+              <p class="icon-discription">
+                For every purchase you make, we will ensure there are no damages
+                or faults and we will check and test the pitch of your
+                instrument.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="pricing">
-        <div class="box"><h2</div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <section>
+        <div class="video">
+          <iframe
+            id="video"
+            src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section>
+        <div class="pricing">
+          <div class="box"><h2</div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
       </section>
     </main>
   </body>
