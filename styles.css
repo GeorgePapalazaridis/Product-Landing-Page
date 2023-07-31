@@ -21,8 +21,10 @@ body {
   min-width: 400px;
 }
 
-main {
-  position: relative;
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 h2 {
@@ -215,9 +217,9 @@ form {
   word-wrap: break-word;
 }
 
-/* .features {
+.features {
   margin-top: 30px;
-} */
+}
 
 .icon {
   display: flex;
@@ -274,11 +276,22 @@ form {
   line-height: 1;
 }
 
+.video {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.video > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
 .pricing {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 4rem;
 }
 
 .box {
@@ -414,6 +427,6 @@ button {
 
   .pricing {
     flex-direction: column;
-    margin: 2rem 0;
+    margin: 4rem 0;
   }
 }
